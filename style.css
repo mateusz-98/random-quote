@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+:root {
+    --bg-clr: #111729;
+    --gray-clr: #97A3B6;
+    --white-clr: #E3E8EF;
+    --btn-border: #4A5567;
+    --purple-clr: #6466E9;
+    --section-bg-clr: #20293A;
+    --section-width: 544px;
+}
+body {
+    background: var(--bg-clr);
+}
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+.c-pointer {
+    cursor: pointer;
+}
+.transition {
+    transition: all .3s ease-in-out;
+}
+section {
+    width: 100%;
+    margin: 240px auto;
+    max-width: var(--section-width);
+}
+.quote-wrapper {
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    padding: 32px 32px 40px 32px;
+    background: var(--section-bg-clr);
+}
+.quote-wrapper:after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("img/bg-image-random-quote.svg");
+    background-repeat: no-repeat;
+}
+.quote-wrapper:hover .quote-tag {
+    color: var(--white-clr);
+    background: var(--purple-clr);
+}
+.quote-author {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1rem;
+    margin-bottom: 12px;
+    color: var(--white-clr);
+}
+.quote-tags {
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.quote-tag {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1rem;
+    padding: 4px 12px;
+    border-radius: 1.75rem;
+    color: var(--purple-clr);
+    border: 1px solid var(--purple-clr);
+}
+.quote-random {
+    z-index: 1;
+    font-size: 24px;
+    position: relative;
+    line-height: 1.8rem;
+    color: var(--gray-clr);
+}
+.quote-buttons img {
+    width: 32px;
+    height: 32px;
+}
+.quote-buttons button {
+    padding: 8px 12px;
+    background: transparent;
+}
+.quote-new {
+    border-radius: 12px 0 0 12px;
+    border: 2px solid var(--btn-border);
+    border-right: 1px solid var(--btn-border);
+}
+.quote-copy {
+    border-radius: 0 12px 12px 0;
+    border: 2px solid var(--btn-border);
+    border-left: 1px solid var(--btn-border);
+}
+.quote-buttons button:hover,
+.quote-buttons button:focus {
+    background: var(--white-clr);
+}
