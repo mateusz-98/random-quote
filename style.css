@@ -58,6 +58,7 @@ section {
     position: absolute;
     background-image: url("img/bg-image-random-quote.svg");
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .quote-wrapper:hover .quote-tag {
     color: var(--white-clr);
@@ -111,4 +112,17 @@ section {
 .quote-buttons button:hover,
 .quote-buttons button:focus {
     background: var(--white-clr);
+}
+.modal {
+    top: 10px;
+    opacity: 0;
+    right: 10px;
+    padding: 20px;
+    position: absolute;
+    border-radius: 12px;
+    color: var(--white-clr);
+    background: var(--section-bg-clr);
+}
+.modal.show {
+    opacity: 1;
 }
